@@ -22,24 +22,25 @@ while True:
     selection = input("Make a move: ")
     # TODO
     # Move the player through the board
-    if selection == "w"
+    if (selection =="w"):
         player.moveUp()
         board.checkMove(player.columnPosition, player.rowPosition -1)
        
-    elif selection == "s"
+    elif (selection =="s"):
         player.moveDown()
         board.checkMove(player.columnPosition, player.rowPosition +1)
         
-    elif selection == "a"
+    elif (selection =="a"):
         player.moveLeft()
         board.checkMove(player.rowPosition,  player.columnPosition -1)
         
-    elif selection == "d"
+    elif (selection =="d"):
         player.moveRight()
         board.checkMove(player.rowPosition,  player.columnPosition +1)
-        
-
-        
+    
+    if board.checkWin(player.rowPosition, player.columnPosition):  
+       print("You Win")
+       break
         
         
     # Check if the player has won, if so print a message and break the loop!
